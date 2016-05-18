@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Apprenda.Messaging.Web", "Apprenda.Messaging.Web\Apprenda.Messaging.Web.csproj", "{5EE5C619-6F4E-4A19-94A7-35C5AD5F1842}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Apprenda.Messaging.Receiver", "Apprenda.Messaging.Receiver\Apprenda.Messaging.Receiver.csproj", "{A627D1D1-1C67-4885-A706-6710237592EC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5EE5C619-6F4E-4A19-94A7-35C5AD5F1842}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EE5C619-6F4E-4A19-94A7-35C5AD5F1842}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EE5C619-6F4E-4A19-94A7-35C5AD5F1842}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EE5C619-6F4E-4A19-94A7-35C5AD5F1842}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A627D1D1-1C67-4885-A706-6710237592EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A627D1D1-1C67-4885-A706-6710237592EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A627D1D1-1C67-4885-A706-6710237592EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A627D1D1-1C67-4885-A706-6710237592EC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

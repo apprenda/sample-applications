@@ -1,0 +1,35 @@
+﻿@model Apprenda.Messaging.Web.Models.MessageModel
+<div class="jumbotron">
+    <h1>Messaging, Caching and Logging</h1>
+    <p class="text-primary"><strong>Apprenda offers a number of advanced capabilities through an easy to use API provided by both .NET and Java SDKs.</strong></p>
+    <p>Two of these capabilities are pub/sub messaging and distributed caching. This demo will show how developers can leverage these 
+    capabilities by adding just a few lines of code, standardizing how these capabilities are implemented throughout the enterprise.</p>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <h2>The Architecture</h2>
+        <p>This application exists of two tiers: a web frontend and a WCF service tier. The web frontend allows the user to enter a new 
+        message. It also displays the currently cached message (which will initially be non existing). When the user hits <strong>Send</strong>
+        the new message will be published on Apprenda's internal Message Bus.</p>
+        <p>The WCF service tier will subscribe to Apprenda's internal Message Bus and it will put any message it receives into Apprenda's 
+        distributed cache.</p>
+    </div>
+    <div class="col-md-7 col-md-offset-1">
+        <h2>The Demo</h2>
+        <div>
+            <hr />
+            <h4>Previously cached message: <strong class="text-primary">@Model.CachedMessage</strong></h4>
+            <hr />
+        </div>
+        <div class="well well-lg">
+            @using (Html.BeginForm("Send", "Home", FormMethod.Post, new { @class = "form-inline" }))
+            {
+                <div class="form-group">
+                    @Html.DisplayFor(m => m.Message)
+                    @Html.TextBoxFor(m => m.Message, new { @class = "form-control" })
+                </div>
+                <button type="submit" class="btn btn-primary">Send</button>
+            }
+        </div>
+    </div>
+</div>
