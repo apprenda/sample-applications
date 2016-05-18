@@ -7,6 +7,7 @@ namespace Apprenda.Messaging.Web.Models
 {
     public class MessageModel
     {
+        public string ComputerName { get; set; }
         public string CachedMessage { get; set; }
         public string Message { get; set; }
     }

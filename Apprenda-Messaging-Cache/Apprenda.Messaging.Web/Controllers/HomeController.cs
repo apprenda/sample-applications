@@ -35,7 +35,7 @@ namespace Apprenda.Messaging.Web.Controllers
                 throw ex;
             }
 
-            return View(new MessageModel { CachedMessage = message});
+            return View(new MessageModel { CachedMessage = message, ComputerName = Environment.MachineName});
         }
 
         [HttpPost]
