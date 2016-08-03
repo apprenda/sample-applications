@@ -1,6 +1,15 @@
 # Sample Messaging, Caching and Logging
 Sample application that leverages the caching, pub/sub and logging API for .NET applications. 
 
+#Architecture of the Application
+This application consists of two tiers: 
+* .NET Web Front End 
+* Standalone WCF service
+
+The web front end allows the user to enter a new message. It also displays the currently cached message (which will initially be non existing). When the user hits *Send* the new message will be published on Apprenda's internal Message Bus.
+
+The WCF service tier subscribes to Apprenda's internal Message Bus and it will place any message it receives into Apprenda's distributed cache. The web front end then reads the message back from the cache and displays it in the UI. 
+
 #Building from Source
 1. Clone the repository
 2. Open the Solution with Visual Studio
