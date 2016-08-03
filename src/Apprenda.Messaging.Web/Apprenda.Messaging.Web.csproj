@@ -39,14 +39,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Apprenda.Utils, Version=6.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Apprenda.Utils, Version=6.5.1.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Program Files (x86)\Apprenda\SDK\API Files\Apprenda.Utils.dll</HintPath>
+      <HintPath>..\..\lib\Apprenda.Utils.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="SaaSGrid.API, Version=6.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="SaaSGrid.API, Version=6.5.1.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Program Files (x86)\Apprenda\SDK\API Files\SaaSGrid.API.dll</HintPath>
+      <HintPath>..\..\lib\SaaSGrid.API.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />

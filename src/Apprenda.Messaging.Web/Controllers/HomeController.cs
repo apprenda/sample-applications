@@ -11,6 +11,7 @@ namespace Apprenda.Messaging.Web.Controllers
 {
     public class HomeController : Controller
     {
+        //Create an instance of the Apprenda Logging service
         private static readonly ILogger log = LogManager.Instance().GetLogger(typeof(HomeController));
 
         public ActionResult Index()
@@ -19,13 +20,14 @@ namespace Apprenda.Messaging.Web.Controllers
             string message;
             try
             {
+                //Retrieve from the application-scoped cache, the entry with a key called message
                 message = ApplicationContext.Current.Cache.Find<string>("message");
 
                 if (string.IsNullOrEmpty(message))
                 {
                     log.InfoFormat("A cached message was not found: {0}", message);
 
-                    message = "No message was cached yet.";
+                    message = "No message has been cached yet.";
                 }
             }
             catch (Exception ex)
@@ -46,9 +48,10 @@ namespace Apprenda.Messaging.Web.Controllers
 		        var now = DateTime.UtcNow;
                 log.InfoFormat("{0}: Message is about to be sent: {1}", now, model.Message);
 
+                //Fire an event with the message being stored. This event will be processed by the WCF service and the message stored in the cache.
                 ApplicationContext.Current.EventManager.Event<string>("message").Invoke(model.Message);
 
-                log.InfoFormat("{0}: Message is sent: {1}", now, model.Message);
+                log.InfoFormat("{0}: Message sent: {1}", now, model.Message);
 	        }
 	        catch (Exception ex)
 	        {
