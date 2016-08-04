@@ -16,6 +16,7 @@ namespace Apprenda.Messaging.Receiver
 
         static EventProcessorService()
         {
+            //Register the event handler
             ApplicationContext.Current.EventManager.Event<string>("message").OnEvent += OnMessageReceived;
             log.Info("EventHandler is registered.");
         }
@@ -26,6 +27,7 @@ namespace Apprenda.Messaging.Receiver
             var computerName = Environment.MachineName;
             log.InfoFormat("[{0}: {1}] Message received: {2}", now, computerName, message);
 
+            //Insert into the application-scoped cached, the message sent by the UI. 
             ApplicationContext.Current.Cache.Insert("message", message, TimeSpan.FromSeconds(5));
         }
 

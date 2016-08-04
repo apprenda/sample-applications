@@ -35,14 +35,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Apprenda.Utils, Version=6.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Apprenda.Utils, Version=6.5.1.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Program Files (x86)\Apprenda\SDK\API Files\Apprenda.Utils.dll</HintPath>
+      <HintPath>..\..\lib\Apprenda.Utils.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="SaaSGrid.API, Version=6.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="SaaSGrid.API, Version=6.5.1.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Program Files (x86)\Apprenda\SDK\API Files\SaaSGrid.API.dll</HintPath>
+      <HintPath>..\..\lib\SaaSGrid.API.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -77,11 +77,12 @@
     </VisualStudio>
   </ProjectExtensions>
   <PropertyGroup>
-    <PreBuildEvent>if exist "$(SolutionDir)..\archives\Apprenda.Messaging.zip" del /F /Q "$(SolutionDir)..\archives\Apprenda.Messaging.zip"</PreBuildEvent>
+    <PreBuildEvent>
+    </PreBuildEvent>
   </PropertyGroup>
   <PropertyGroup>
-    <PostBuildEvent>if not exist "$(SolutionDir)..\archives\" mkdir "$(SolutionDir)..\archives\"
-acs NewPackage -O "$(SolutionDir)..\archives\Apprenda.Messaging.zip" -Sln "$(SolutionDir)Apprenda.sln" -I "Apprenda.Messaging.Web" -PrivateRoot "Apprenda.Messaging.Web" -S "Apprenda.Messaging.Receiver"</PostBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

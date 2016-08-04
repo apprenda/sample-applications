@@ -4,7 +4,7 @@
     <SettingDefinition name="Private Root" value="Apprenda.Messaging.Web" />
     <SettingDefinition name="Extention Filter" value=".sln;.vb;.cs;.h;.cpp;.pdb;.obj;.dep;.idb" />
     <SettingDefinition name="Build Config" value="Release" />
-    <SettingDefinition name="Archive Output Path" value="C:\Code\Apprenda-Messaging-Cache\Apprenda\archives\Archive.zip" />
+    <SettingDefinition name="Archive Output Path" value="C:\code\sample-apprenda-messaging-cache\Archive.zip" />
     <SettingDefinition name="Application Provisioning Script" />
     <SettingDefinition name="Tenant Provisioning Script" />
     <SettingDefinition name="Services" value="Apprenda.Messaging.Receiver," />

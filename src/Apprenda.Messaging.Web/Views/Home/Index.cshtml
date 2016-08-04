@@ -8,11 +8,11 @@
 <div class="row">
     <div class="col-md-4">
         <h2>The Architecture</h2>
-        <p>This application exists of two tiers: a web frontend and a WCF service tier. The web frontend allows the user to enter a new 
+        <p>This application consists of two tiers: a .NET Web front end and a standalone WCF service tier. The web front end allows the user to enter a new 
         message. It also displays the currently cached message (which will initially be non existing). When the user hits <strong>Send</strong>
         the new message will be published on Apprenda's internal Message Bus.</p>
-        <p>The WCF service tier will subscribe to Apprenda's internal Message Bus and it will put any message it receives into Apprenda's 
-        distributed cache.</p>
+        <p>The WCF service tier subscribes to Apprenda's internal Message Bus and it will put any message it receives into Apprenda's 
+        distributed cache.The web front end then reads the message back from the cache and displays it in the UI.</p>
     </div>
     <div class="col-md-7 col-md-offset-1">
         <h2>The Demo</h2>
